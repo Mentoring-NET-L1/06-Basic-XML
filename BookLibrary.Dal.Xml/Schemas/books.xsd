@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Library"
+    targetNamespace="http://tempuri.org/books.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/books.xsd"
+    xmlns:mstns="http://tempuri.org/books.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:complexType name="authors">
+    <xs:sequence>
+      <xs:element name="author" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="book">
+    <xs:sequence>
+      <xs:element name="authors" type="authors"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="publicationPlace" type="xs:string"/>
+    <xs:attribute name="publisher" type="xs:string"/>
+    <xs:attribute name="publicationYear" type="xs:integer"/>
+    <xs:attribute name="pageCount" type="xs:integer"/>
+    <xs:attribute name="notice" type="xs:string"/>
+    <xs:attribute name="isbn" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="newspaper">
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="publicationPlace" type="xs:string"/>
+    <xs:attribute name="publisher" type="xs:string"/>
+    <xs:attribute name="publicationDate" type="xs:date" use="required"/>
+    <xs:attribute name="pageCount" type="xs:integer"/>
+    <xs:attribute name="notice" type="xs:string"/>
+    <xs:attribute name="issn" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="patent">
+    <xs:sequence>
+      <xs:element name="authors" type="authors"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="country" type="xs:string" use="required"/>
+    <xs:attribute name="registrationNumber" type="xs:string" use="required"/>
+    <xs:attribute name="applicationDate" type="xs:date"/>
+    <xs:attribute name="publicationDate" type="xs:date" use="required"/>
+    <xs:attribute name="pageCount" type="xs:integer"/>
+    <xs:attribute name="notice" type="xs:string"/>
+  </xs:complexType>
+  <xs:element name="books">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="book" type="book"/>
+          <xs:element name="newspaper" type="newspaper"/>
+          <xs:element name="patent" type="patent"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="library" type="xs:string" use="required"/>
+      <xs:attribute name="modifiedDate" type="xs:date" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

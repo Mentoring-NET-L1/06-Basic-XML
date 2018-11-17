@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<books xmlns="http://tempuri.org/books.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       library="Pushkinskaya library"
+       modifiedDate="2012-10-10">
+  <book name="Quo vadis"
+        publicationPlace="Минск"
+        publisher="Мастацкая літаратура"
+        publicationYear="1990"
+        pageCount="607"
+        notice=""
+        isbn="978-5-340-00575-5">
+    <authors>
+      <author>Генрик Сенкевич</author>
+    </authors>
+  </book>
+  <newspaper name="Газета"
+             publicationPlace="Гомель"
+             publisher="Красная Звезда"
+             publicationDate="2014-10-30"
+             pageCount="20"
+             notice="заметки"
+             issn="0317-8471" />
+  <patent name="Патент"
+          country="Беларусь"
+          registrationNumber="PP000126"
+          applicationDate="2014-10-30"
+          publicationDate="2015-03-14"
+          notice="Хороший патент"
+          pageCount="15">
+    <authors>
+      <author>Иванов Иван</author>
+      <author>Петров Пётр</author>
+    </authors>
+  </patent>
+  <book name="Quo vadis"
+        publicationPlace="Минск"
+        publisher="Мастацкая літаратура"
+        publicationYear="1990"
+        pageCount="607"
+        notice=""
+        isbn="978-5-340-00575-5">
+    <authors>
+      <author>Генрик Сенкевич</author>
+    </authors>
+  </book>
+</books>
